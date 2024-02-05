@@ -4,6 +4,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px dashed;
+}
+
+.d_flex {
+  display: flex;
+}
+
+.flex_column {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.col_4 {
+  width: calc((100% / 12) * 4);
+}
+
+.col_8 {
+  width: calc((100% / 12) * 8);
 }
 
 /* #region ||||| UTILITIES ||||| */
@@ -11,6 +29,35 @@
 
 /* #region ||||| DEBUG RULES ||||| */
 
+.debug {
+
+  .app {
+    width: 80%;
+    max-width: 1200px;
+    height: 95vh;
+    margin: 2.5vh auto;
+    overflow-y: hidden;
+
+    .chat {
+      height: calc(100% - 9.5vh)
+    }
+
+    .contacts,
+    .chat {
+      width: 100%;
+      overflow-y: scroll;
+    }
+
+    .profile,
+    .notifications,
+    .contact,
+    .active_contact,
+    .input_message {
+      width: 100%;
+      height: calc((100vh - 5vh) / 10);
+    }
+  }
+}
 
 
 /* #endregion ||||| DEBUG RULES ||||| */
