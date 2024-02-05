@@ -15,12 +15,24 @@
   align-items: flex-start;
 }
 
+.col_1 {
+  width: calc(100% / 12);
+}
+
 .col_4 {
   width: calc((100% / 12) * 4);
 }
 
 .col_8 {
   width: calc((100% / 12) * 8);
+}
+
+.col_11 {
+  width: calc((100% / 12) * 11);
+}
+
+.hide {
+  display: none;
 }
 
 /* #region ||||| UTILITIES ||||| */
@@ -35,7 +47,7 @@
   }
 
   .profile {
-    background-color: lightgoldenrodyellow;
+    background-color: lightcoral;
   }
 
   .notifications {
@@ -51,7 +63,7 @@
   }
 
   .active_contact {
-    background-color: lightpink;
+    background-color: lightcoral;
   }
 
   .input_message {
@@ -73,94 +85,84 @@
 
 .debug {
 
-  #site_main {
-    height: 100vh;
-    padding: 1rem 0;
+  .app {
+    box-shadow: 15px 15px 15px -5px grey;
+    border: 1px solid grey;
+    border-radius: 10px;
 
-    .app {
-      width: 80%;
-      max-width: 1200px;
-      height: 95vh;
-      margin: auto;
-      box-shadow: 15px 15px 15px -5px grey;
-      border: 1px solid grey;
-      border-radius: 10px;
-      overflow-y: hidden;
+    .row,
+    .col_8,
+    .left_side,
+    .right_side {
+      height: 100%;
+    }
 
-      .row,
-      .col_8,
-      .left_side,
-      .right_side {
-        height: 100%;
+    .left_side,
+    .right_side {
+      width: 100%;
+      position: relative;
+    }
+
+    .left_side {
+      border-right: 1px solid grey;
+    }
+
+    .contacts {
+      height: calc(100% - 185px);
+    }
+
+    .chat {
+      height: calc(100% - 140px);
+      padding: 3rem 4rem;
+      gap: 0.5rem;
+
+      .sent_message,
+      .received_message {
+        border-radius: 10px;
+        padding: 1rem 1rem 2rem;
+        max-width: 60%;
       }
 
-      .left_side,
-      .right_side {
-        width: 100%;
-        position: relative;
+      .sent_message {
+        align-self: flex-end;
       }
 
-      .left_side {
-        border-right: 1px solid grey;
+      .received_message {
+        align-self: flex-start;
       }
+    }
 
-      .contacts {
-        height: calc(100% - 185px);
-      }
+    .contacts,
+    .chat {
+      width: 100%;
+      overflow-y: scroll;
+    }
 
-      .chat {
-        height: calc(100% - 140px);
-        padding: 3rem;
-        gap: 0.5rem;
+    .profile,
+    .notifications,
+    .active_contact,
+    .input_message {
+      width: 100%;
+      height: 70px;
+    }
 
-        .sent_message,
-        .received_message {
-          border-radius: 10px;
-          padding: 1rem 1rem 2rem;
-          max-width: 60%;
-        }
+    .search_bar,
+    .notifications,
+    .chat,
+    .input_message {
+      border-top: 1px solid grey;
+    }
 
-        .sent_message {
-          align-self: flex-end;
-        }
+    .search_bar {
+      width: 100%;
+      height: 45px;
+      border-bottom: 1px solid grey;
+    }
 
-        .received_message {
-          align-self: flex-start;
-        }
-      }
-
-      .contacts,
-      .chat {
-        width: 100%;
-        overflow-y: scroll;
-      }
-
-      .profile,
-      .notifications,
-      .active_contact,
-      .input_message {
-        width: 100%;
-        height: 70px;
-      }
-
-      .search_bar,
-      .notifications,
-      .chat,
-      .input_message {
-        border-top: 1px solid grey;
-      }
-
-      .search_bar {
-        width: 100%;
-        height: 45px;
-        border-bottom: 1px solid grey;
-      }
-
-      .contact {
-        width: 100%;
-        height: 75px;
-        border-bottom: 1px solid lightgray;
-      }
+    .contact {
+      width: 100%;
+      height: 75px;
+      border-bottom: 1px solid lightgray;
     }
   }
 }
@@ -179,14 +181,68 @@ body {
 
 
 /* #region ||||| MAIN ||||| */
+#site_main {
+  height: 100vh;
+  padding: 1rem 0;
+}
 
-
+.app {
+  width: 80%;
+  max-width: 1200px;
+  height: 95vh;
+  margin: auto;
+  overflow-y: hidden;
+}
 
 /* #endregion ||||| MAIN ||||| */
 
 
 /* #region ||||| MEDIA QUERY ||||| */
 
+@media screen and (max-width:991px) {
 
+  .col_md_1 {
+    width: calc(100% / 12);
+    min-width: 80px;
+  }
+
+  .col_md_11 {
+    width: calc((100% / 12) * 11);
+  }
+
+  .hide_md {
+    display: none;
+  }
+
+  #site_main {
+    padding: 0;
+
+    .app {
+      width: 100%;
+      height: 100vh;
+
+      .row {
+        width: 100%;
+      }
+
+      .left_side {
+
+        .contacts {
+          height: calc(100% - 70px);
+        }
+      }
+
+      .right_side {
+
+        .chat {
+          padding: 3rem 3rem;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:540px) {}
 
 /* #endregion ||||| MEDIA QUERY ||||| */
