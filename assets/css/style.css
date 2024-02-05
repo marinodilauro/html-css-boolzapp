@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px dashed;
 }
 
 .d_flex {
@@ -31,46 +30,112 @@
 
 .debug {
 
-  .app {
+  #site_main {
+    background-color: bisque;
+  }
 
-    width: 80%;
-    max-width: 1200px;
-    height: 95vh;
-    margin: 2.5vh auto;
-    overflow-y: hidden;
+  .profile {
+    background-color: lightgoldenrodyellow;
+  }
 
-    .left_side,
-    .right_side {
-      position: relative;
-    }
+  .notifications {
+    background-color: lightblue;
+  }
 
-    .chat {
-      height: calc(100vh - 24vh)
-    }
+  .search_bar {
+    background-color: lightgray;
+  }
 
-    .contacts,
-    .chat {
-      width: 100%;
-      overflow-y: scroll;
-    }
+  .contact {
+    background-color: lightyellow;
+  }
 
-    .profile,
-    .notifications,
-    .active_contact,
-    .input_message {
-      /* position: fixed; */
-      width: 100%;
-      height: 70px;
-    }
+  .active_contact {
+    background-color: lightpink;
+  }
 
-    .search_bar {
-      width: 100%;
-      height: 35px;
-    }
+  .input_message {
+    background-color: lightcoral;
+  }
 
-    .contact {
-      width: 100%;
-      height: 75px;
+  .chat {
+    background-image: url("../img/mine.jpg");
+  }
+}
+
+.debug {
+
+  #site_main {
+    height: 100vh;
+    padding: 1rem 0;
+
+    .app {
+      width: 80%;
+      max-width: 1200px;
+      height: 95vh;
+      margin: auto;
+      box-shadow: 15px 15px 15px -5px grey;
+      border: 1px solid grey;
+      border-radius: 10px;
+      overflow-y: hidden;
+
+      .row,
+      .col_8,
+      .left_side,
+      .right_side {
+        height: 100%;
+      }
+
+      .left_side,
+      .right_side {
+        position: relative;
+      }
+
+      .left_side {
+        border-right: 1px solid grey;
+      }
+
+      .contacts {
+        height: calc(100% - 185px);
+      }
+
+      .chat {
+        height: calc(100% - 140px)
+      }
+
+      .contacts,
+      .chat {
+        width: 100%;
+        overflow-y: scroll;
+      }
+
+      .profile,
+      .notifications,
+      .active_contact,
+      .input_message {
+        /* position: fixed; */
+        width: 100%;
+        height: 70px;
+      }
+
+      .search_bar,
+      .notifications,
+      .chat,
+      .input_message {
+        border-top: 1px solid grey;
+      }
+
+      .search_bar {
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px solid grey;
+      }
+
+      .contact {
+        width: 100%;
+        height: 75px;
+        border-bottom: 1px solid lightgray;
+      }
     }
   }
 }
