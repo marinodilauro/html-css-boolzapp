@@ -60,6 +60,14 @@
 
   .chat {
     background-image: url("../img/mine.jpg");
+
+    .sent_message {
+      background-color: rgb(111, 239, 111);
+    }
+
+    .received_message {
+      background-color: white;
+    }
   }
 }
 
@@ -88,6 +96,7 @@
 
       .left_side,
       .right_side {
+        width: 100%;
         position: relative;
       }
 
@@ -100,7 +109,24 @@
       }
 
       .chat {
-        height: calc(100% - 140px)
+        height: calc(100% - 140px);
+        padding: 3rem;
+        gap: 0.5rem;
+
+        .sent_message,
+        .received_message {
+          border-radius: 10px;
+          padding: 1rem 1rem 2rem;
+          max-width: 60%;
+        }
+
+        .sent_message {
+          align-self: flex-end;
+        }
+
+        .received_message {
+          align-self: flex-start;
+        }
       }
 
       .contacts,
@@ -113,7 +139,6 @@
       .notifications,
       .active_contact,
       .input_message {
-        /* position: fixed; */
         width: 100%;
         height: 70px;
       }
@@ -146,7 +171,9 @@
 
 /* #region ||||| COMMON RULES ||||| */
 
-
+body {
+  font-family: 'Lato', sans-serif;
+}
 
 /* #endregion ||||| COMMON RULES ||||| */
 
