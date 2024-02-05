@@ -31,6 +31,10 @@
   width: calc((100% / 12) * 11);
 }
 
+.col_12 {
+  width: 100%;
+}
+
 .hide {
   display: none;
 }
@@ -90,60 +94,9 @@
     border: 1px solid grey;
     border-radius: 10px;
 
-    .row,
-    .col_8,
-    .left_side,
-    .right_side {
-      height: 100%;
-    }
-
-    .left_side,
-    .right_side {
-      width: 100%;
-      position: relative;
-    }
 
     .left_side {
       border-right: 1px solid grey;
-    }
-
-    .contacts {
-      height: calc(100% - 185px);
-    }
-
-    .chat {
-      height: calc(100% - 140px);
-      padding: 3rem 4rem;
-      gap: 0.5rem;
-
-      .sent_message,
-      .received_message {
-        border-radius: 10px;
-        padding: 1rem 1rem 2rem;
-        max-width: 60%;
-      }
-
-      .sent_message {
-        align-self: flex-end;
-      }
-
-      .received_message {
-        align-self: flex-start;
-      }
-    }
-
-    .contacts,
-    .chat {
-      width: 100%;
-      overflow-y: scroll;
-    }
-
-    .profile,
-    .notifications,
-    .active_contact,
-    .input_message {
-      width: 100%;
-      height: 70px;
     }
 
     .search_bar,
@@ -192,6 +145,64 @@ body {
   height: 95vh;
   margin: auto;
   overflow-y: hidden;
+
+  .row,
+  .col_8,
+  .left_side,
+  .right_side {
+    height: 100%;
+  }
+
+  .left_side,
+  .right_side {
+    width: 100%;
+  }
+
+  .contacts,
+  .chat {
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .profile,
+  .notifications,
+  .active_contact,
+  .input_message {
+    width: 100%;
+    height: 70px;
+  }
+
+  .left_side {
+
+    .contacts {
+      height: calc(100% - 185px);
+    }
+  }
+
+
+  .right_side {
+
+    .chat {
+      height: calc(100% - 140px);
+      padding: 3rem 4rem;
+      gap: 0.5rem;
+
+      .sent_message,
+      .received_message {
+        border-radius: 10px;
+        padding: 1rem 1rem 2rem;
+        max-width: 70%;
+      }
+
+      .sent_message {
+        align-self: flex-end;
+      }
+
+      .received_message {
+        align-self: flex-start;
+      }
+    }
+  }
 }
 
 /* #endregion ||||| MAIN ||||| */
@@ -236,6 +247,11 @@ body {
 
         .chat {
           padding: 3rem 3rem;
+
+          .sent_message,
+          .received_message {
+            max-width: 80%;
+          }
         }
       }
     }
@@ -243,6 +259,33 @@ body {
 
 }
 
-@media screen and (max-width:540px) {}
+@media screen and (max-width:540px) {
+
+  .col_sm_12 {
+    width: 100%;
+  }
+
+  .hide_sm {
+    display: none;
+  }
+
+
+  #site_main {
+
+    .app {
+
+      .right_side {
+
+        .chat {
+
+          .sent_message,
+          .received_message {
+            max-width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* #endregion ||||| MEDIA QUERY ||||| */
