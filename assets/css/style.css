@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bz-bg_top: rgba(0, 150, 136, 1);
+  --bz-bg-bg_bottom: rgba(219, 219, 210, 1);
+  --bz-dark: rgba(0, 0, 0, 1);
+  --bz-light: rgba(250, 250, 250, 1);
+  --bz-lighter: rgba(255, 255, 255, 1);
+  --bz-received_msg: rgba(255, 255, 255, 1);
+  --bz-sent_msg: rgba(213, 249, 186, 1);
+  --bz-accent: rgba(142, 218, 252, 1);
+}
+
 .d_flex {
   display: flex;
 }
@@ -46,9 +57,8 @@
 
 .debug {
 
-  #site_main {
-    background-color: bisque;
-  }
+  background-color: bisque;
+
 
   .profile {
     background-color: lightcoral;
@@ -128,22 +138,20 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* #endregion ||||| COMMON RULES ||||| */
 
 
 /* #region ||||| MAIN ||||| */
-#site_main {
-  height: 100vh;
-  padding: 1rem 0;
-}
 
 .app {
   width: 80%;
   max-width: 1200px;
   height: 95vh;
-  margin: auto;
+  margin: 1rem auto 2rem;
   overflow-y: hidden;
 
   .row,
@@ -176,6 +184,12 @@ body {
 
     .contacts {
       height: calc(100% - 185px);
+
+      .contact {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   }
 
@@ -225,38 +239,34 @@ body {
     display: none;
   }
 
-  #site_main {
-    padding: 0;
+  .app {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
 
-    .app {
+    .row {
       width: 100%;
-      height: 100vh;
+    }
 
-      .row {
-        width: 100%;
+    .left_side {
+
+      .contacts {
+        height: calc(100% - 70px);
       }
+    }
 
-      .left_side {
+    .right_side {
 
-        .contacts {
-          height: calc(100% - 70px);
-        }
-      }
+      .chat {
+        padding: 3rem 3rem;
 
-      .right_side {
-
-        .chat {
-          padding: 3rem 3rem;
-
-          .sent_message,
-          .received_message {
-            max-width: 80%;
-          }
+        .sent_message,
+        .received_message {
+          max-width: 80%;
         }
       }
     }
   }
-
 }
 
 @media screen and (max-width:540px) {
@@ -269,19 +279,15 @@ body {
     display: none;
   }
 
+  .app {
 
-  #site_main {
+    .right_side {
 
-    .app {
+      .chat {
 
-      .right_side {
-
-        .chat {
-
-          .sent_message,
-          .received_message {
-            max-width: 90%;
-          }
+        .sent_message,
+        .received_message {
+          max-width: 90%;
         }
       }
     }
