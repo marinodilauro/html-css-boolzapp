@@ -271,7 +271,14 @@ body {
         .last_message,
         .time {
           color: var(--bz-light_font);
+        }
+
+        .last_message {
           font-size: 0.9rem;
+        }
+
+        .time {
+          font-size: 0.8rem;
         }
       }
     }
