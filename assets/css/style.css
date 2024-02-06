@@ -74,9 +74,6 @@
 
 .debug {
 
-
-
-
   .active_contact {
     background-color: lightcoral;
   }
@@ -89,10 +86,7 @@
 .debug {
 
   .app {
-    box-shadow: 15px 15px 15px -5px grey;
-    border: 1px solid grey;
     border-radius: 10px;
-
 
     .left_side {
       border-right: 1px solid grey;
@@ -103,12 +97,6 @@
     .chat,
     .input_message {
       border-top: 1px solid grey;
-    }
-
-    .contact {
-      width: 100%;
-      height: 75px;
-      border-bottom: 1px solid lightgray;
     }
   }
 }
@@ -230,6 +218,7 @@ body {
         width: 95%;
         height: 35px;
         background-color: var(--bz-lighter);
+        box-shadow: inset 0 0 0 1px var(--bz-light_font);
         border-radius: 3px;
 
         i {
@@ -238,8 +227,8 @@ body {
         }
 
         input[type=text] {
-          flex-grow: 1;
-          padding: 0.5rem 0.5rem 0.5rem 0;
+          width: 90%;
+          padding: 0.5rem 0;
           border: none;
           outline: none;
         }
@@ -248,11 +237,30 @@ body {
 
     .contacts {
       height: calc(100% - 185px);
-
       background-color: var(--bz-lighter);
 
       .contact {
-        background-color: var();
+        width: 100%;
+        height: 80px;
+        border-bottom: 1px solid lightgray;
+        padding: 1rem 1rem;
+        align-items: center;
+        gap: 1rem;
+
+        .profile_pic {
+          padding: 0;
+        }
+
+        p:first-child {
+          color: var(--bz-dark);
+          font-size: 1.2rem;
+          padding-bottom: 0.2rem;
+        }
+
+        p {
+          color: var(--bz-light_font);
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -327,6 +335,11 @@ body {
 
       .contacts {
         height: calc(100% - 70px);
+
+        .contact {
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
 
