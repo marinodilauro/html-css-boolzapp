@@ -133,10 +133,10 @@ body {
 .icon_group {
   list-style: none;
   padding-right: 1.5rem;
+  gap: 1rem;
 
   li {
     display: inline;
-    padding: 0 0.5rem;
 
     a {
       color: var(--bz-lighter_font);
@@ -190,7 +190,7 @@ body {
     }
 
     .profile {
-      gap: calc(100% - 190px);
+      gap: calc(100% - 188px);
     }
 
     .notifications {
