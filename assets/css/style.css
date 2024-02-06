@@ -84,7 +84,7 @@
   text-overflow: ellipsis;
 }
 
-/* #region ||||| UTILITIES ||||| */
+/* #endregion ||||| UTILITIES ||||| */
 
 
 /* #region ||||| DEBUG RULES ||||| */
@@ -98,7 +98,6 @@
     border-top: 1px solid var(--bz-light_font);
   }
 }
-
 
 /* #endregion ||||| DEBUG RULES ||||| */
 
@@ -148,8 +147,8 @@ body {
   height: 95vh;
   margin: 1rem auto 2rem;
   border-radius: 10px;
-  overflow-y: hidden;
   border: 1px solid var(--bz-lighter_font);
+  overflow-y: hidden;
 
   .row,
   .col_8,
@@ -166,7 +165,7 @@ body {
   .contacts,
   .chat {
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .profile,
