@@ -27,8 +27,8 @@
   align-items: flex-start;
 }
 
-.flex_space_around {
-  justify-content: space-around;
+.flex_space_between {
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -121,14 +121,19 @@ body {
 }
 
 .profile_pic {
-  width: 50px;
-  aspect-ratio: 1;
-  border-radius: 50%;
+  padding-left: 1.5rem;
+  align-items: center;
+
+  img {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
 }
 
 .icon_group {
   list-style: none;
-
+  padding-right: 1.5rem;
 
   li {
     display: inline;
@@ -186,7 +191,7 @@ body {
     }
 
     .profile {
-      gap: 8rem;
+      gap: calc(100% - 190px);
     }
 
     .notifications {
@@ -266,6 +271,15 @@ body {
     }
 
     .left_side {
+
+      .profile {
+        align-items: center;
+        justify-content: center;
+
+        .profile_pic {
+          padding: 0;
+        }
+      }
 
       .contacts {
         height: calc(100% - 70px);
