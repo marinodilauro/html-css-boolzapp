@@ -44,9 +44,9 @@
 
 .p_absolute {
   position: absolute;
-  top: 20%;
+  top: 45%;
   left: 95%;
-  transform: translate(-100%);
+  transform: translate(-100%, -100%);
 }
 
 .col_1 {
@@ -309,8 +309,28 @@ body {
       .sent_message,
       .received_message {
         border-radius: 10px;
-        padding: 1rem 1rem 2rem;
         max-width: 70%;
+      }
+
+      .time,
+      .msg_options {
+        font-size: 0.7rem;
+        color: var(--bz-lighter_font);
+      }
+
+      .time.p_absolute {
+        top: 95%;
+        left: 97%;
+      }
+
+      .msg_options.p_absolute {
+        top: 15%;
+        left: 97%;
+        transform: translate(-100%);
+      }
+
+      .message {
+        padding: 1rem 2rem 1rem 1rem;
       }
 
       .sent_message {
@@ -405,6 +425,7 @@ body {
     .right_side {
 
       .chat {
+        padding: 2rem 2rem;
 
         .sent_message,
         .received_message {
