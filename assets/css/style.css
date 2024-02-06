@@ -10,10 +10,11 @@
   --bz-bg_top: rgba(0, 150, 136, 1);
   --bz-bg-bg_bottom: rgba(219, 219, 210, 1);
   --bz-dark: rgba(0, 0, 0, 1);
-  --bz-light: rgba(250, 250, 250, 1);
+  --bz-light: rgba(234, 234, 234, 1);
   --bz-lighter: rgba(255, 255, 255, 1);
   --bz-received_msg: rgba(255, 255, 255, 1);
   --bz-sent_msg: rgba(213, 249, 186, 1);
+  --bz-light_font: rgba(177, 177, 177, 1);
   --bz-accent: rgba(142, 218, 252, 1);
 }
 
@@ -24,6 +25,11 @@
 .flex_column {
   flex-direction: column;
   align-items: flex-start;
+}
+
+.flex_space_around {
+  justify-content: space-around;
+  align-items: center;
 }
 
 .col_1 {
@@ -57,24 +63,8 @@
 
 .debug {
 
-  background-color: bisque;
 
 
-  .profile {
-    background-color: lightcoral;
-  }
-
-  .notifications {
-    background-color: lightblue;
-  }
-
-  .search_bar {
-    background-color: lightgray;
-  }
-
-  .contact {
-    background-color: lightyellow;
-  }
 
   .active_contact {
     background-color: lightcoral;
@@ -82,18 +72,6 @@
 
   .input_message {
     background-color: lightcoral;
-  }
-
-  .chat {
-    background-image: url("../img/mine.jpg");
-
-    .sent_message {
-      background-color: rgb(111, 239, 111);
-    }
-
-    .received_message {
-      background-color: white;
-    }
   }
 }
 
@@ -130,16 +108,36 @@
   }
 }
 
-
 /* #endregion ||||| DEBUG RULES ||||| */
 
 
 /* #region ||||| COMMON RULES ||||| */
 
 body {
+  background: linear-gradient(to bottom, var(--bz-bg_top) 0 15%, var(--bz-bg-bg_bottom) 15% 100%);
   font-family: 'Lato', sans-serif;
   height: 100vh;
   overflow: hidden;
+}
+
+.profile_pic {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.icon_group {
+  list-style: none;
+
+
+  li {
+    display: inline;
+    padding: 0 0.5rem;
+
+    a {
+      color: var(--bz-light_font);
+    }
+  }
 }
 
 /* #endregion ||||| COMMON RULES ||||| */
@@ -182,10 +180,27 @@ body {
 
   .left_side {
 
+    .profile,
+    .search_bar {
+      background-color: var(--bz-light);
+    }
+
+    .profile {
+      gap: 8rem;
+    }
+
+    .notifications {
+      background-color: var(--bz-accent);
+    }
+
     .contacts {
       height: calc(100% - 185px);
 
+      background-color: var(--bz-lighter);
+
       .contact {
+
+        background-color: var();
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -193,13 +208,13 @@ body {
     }
   }
 
-
   .right_side {
 
     .chat {
       height: calc(100% - 140px);
       padding: 3rem 4rem;
-      gap: 0.5rem;
+      gap: 0.7rem;
+      background-image: url("../img/mine.jpg");
 
       .sent_message,
       .received_message {
@@ -210,10 +225,12 @@ body {
 
       .sent_message {
         align-self: flex-end;
+        background-color: var(--bz-sent_msg);
       }
 
       .received_message {
         align-self: flex-start;
+        background-color: var(--bz-received_msg);
       }
     }
   }
