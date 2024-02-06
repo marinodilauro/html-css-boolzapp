@@ -56,6 +56,12 @@
   display: none;
 }
 
+.text_overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* #region ||||| UTILITIES ||||| */
 
 
@@ -121,11 +127,11 @@ body {
 }
 
 .profile_pic {
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   align-items: center;
 
   img {
-    width: 50px;
+    width: 55px;
     aspect-ratio: 1;
     border-radius: 50%;
   }
@@ -196,6 +202,24 @@ body {
 
     .notifications {
       background-color: var(--bz-accent);
+      align-items: center;
+      padding: 1rem 1rem;
+      gap: 1rem;
+
+      .notification_icon {
+        background-color: var(--bz-lighter);
+        color: var(--bz-accent);
+        border-radius: 50%;
+        padding: 1rem 0.9rem;
+      }
+
+      .toggle_notifications {
+        color: var(--bz-dark);
+
+        a {
+          color: grey;
+        }
+      }
     }
 
     .contacts {
@@ -204,11 +228,7 @@ body {
       background-color: var(--bz-lighter);
 
       .contact {
-
         background-color: var();
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
     }
   }
