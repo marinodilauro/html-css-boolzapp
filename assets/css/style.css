@@ -486,6 +486,11 @@ body {
         .received_message {
           max-width: 80%;
         }
+
+        .msg_actions {
+          top: 20px;
+          left: 80%;
+        }
       }
     }
   }
@@ -511,6 +516,11 @@ body {
         .sent_message,
         .received_message {
           max-width: 90%;
+        }
+
+        .msg_actions {
+          top: 20px;
+          left: 100%;
         }
       }
 
