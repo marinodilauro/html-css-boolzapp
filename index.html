@@ -48,7 +48,7 @@
 
           <!-- Notifications -->
           <div class="notifications d_flex hide_md">
-            <div class="notification_icon">
+            <div class="notification_icon d_flex flex_center">
               <i class="fa-solid fa-lg fa-bell-slash"></i>
             </div>
             <div class="toggle_notifications text_overflow">
@@ -61,7 +61,7 @@
           <div class="search d_flex flex_center hide_md">
             <div class="search_bar d_flex flex_center">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Cerca o inizia una nuova chat">
+              <input type="search" placeholder="Cerca o inizia una nuova chat">
             </div>
           </div>
 
@@ -206,33 +206,250 @@
           <!-- Chat -->
           <div class="chat d_flex flex_column">
 
-            <div class="sent_message p_relative">
+            <div class="sent_message d_flex">
               <div class="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, laudantium
                 vitae quod commodi, illo maxime culpa earum odit pariatur reiciendis repudiandae nam! Eligendi
-                consequatur itaque ipsum, nostrum quaerat ut quisquam.</div>
-              <i class="msg_options p_absolute fa-solid fa-chevron-down"></i>
-              <p class="time p_absolute">16:13</p>
+                consequatur itaque ipsum, nostrum quaerat ut quisquam.
+              </div>
+
+              <!-- Dropdown menu -->
+              <div class="msg_menu d_flex flex_column">
+                <i class="msg_options_icon fa-solid fa-chevron-down"></i>
+                <div class="msg_actions hide">
+
+                  <!-- Reactions -->
+                  <div class="reactions">
+                    <ul class="d_flex">
+                      <li class="d_flex"><a href="#">👍</a></li>
+                      <li class="d_flex"><a href="#">❤️</a></li>
+                      <li class="d_flex"><a href="#">😂</a></li>
+                      <li class="d_flex"><a href="#">😯</a></li>
+                      <li class="d_flex"><a href="#">😢</a></li>
+                      <li class="d_flex"><a href="#">🙏</a></li>
+                    </ul>
+                  </div>
+                  <hr>
+
+                  <!-- Reply and Copy-->
+                  <div class="reply">
+                    <a href="#"><i class="fa-solid fa-reply"></i>
+                      Rispondi</a>
+                  </div>
+                  <div class="copy">
+                    <a href="#"><i class="fa-solid fa-copy"></i>
+                      Copia</a>
+                  </div>
+                  <hr>
+
+                  <!-- Forward, Important and Delete -->
+                  <div class="forward">
+                    <a href="#"><i class="fa-solid fa-share"></i>
+                      Inoltra</a>
+                  </div>
+                  <div class="important">
+                    <a href="#"> <i class="fa-regular fa-star"></i>
+                      Importante</a>
+                  </div>
+                  <div class="delete">
+                    <a href="#"> <i class="fa-regular fa-trash-can"></i>
+                      Elimina</a>
+                  </div>
+                  <hr>
+
+                  <!-- Select -->
+                  <div class="select">
+                    <a href="#"><i class="fa-regular fa-square-check"></i>
+                      Seleziona</a>
+                  </div>
+
+                </div>
+
+                <p class="time">16:13</p>
+              </div>
             </div>
 
-            <div class="received_message p_relative">
-              <div class="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo maxime culpa earum
-                odit pariatur reiciendis repudiandae nam! Eligendi
-                consequatur itaque ipsum.</div>
-              <i class="msg_options p_absolute fa-solid fa-chevron-down"></i>
-              <p class="time p_absolute">16:15</p>
-            </div>
-
-            <div class="received_message p_relative">
-              <div class="message">Lorem ipsum dolor sit.</div>
-              <i class="msg_options p_absolute fa-solid fa-chevron-down"></i>
-              <p class="time p_absolute">16:15</p>
-            </div>
-
-            <div class="sent_message p_relative">
+            <div class="received_message d_flex">
               <div class="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, laudantium
-                vitae quod commodi! Eligendi consequatur itaque ipsum, nostrum quaerat ut quisquam.</div>
-              <i class="msg_options p_absolute fa-solid fa-chevron-down"></i>
-              <p class="time p_absolute">16:18</p>
+                vitae quod commodi, illo maxime culpa earum odit pariatur reiciendis repudiandae nam!
+              </div>
+
+              <!-- Dropdown menu -->
+              <div class="msg_menu d_flex flex_column">
+                <i class="msg_options_icon fa-solid fa-chevron-down"></i>
+                <div class="msg_actions hide">
+
+                  <!-- Reactions -->
+                  <div class="reactions">
+                    <ul class="d_flex">
+                      <li class="d_flex"><a href="#">👍</a></li>
+                      <li class="d_flex"><a href="#">❤️</a></li>
+                      <li class="d_flex"><a href="#">😂</a></li>
+                      <li class="d_flex"><a href="#">😯</a></li>
+                      <li class="d_flex"><a href="#">😢</a></li>
+                      <li class="d_flex"><a href="#">🙏</a></li>
+                    </ul>
+                  </div>
+                  <hr>
+
+                  <!-- Reply and Copy-->
+                  <div class="reply">
+                    <a href="#"><i class="fa-solid fa-reply"></i>
+                      Rispondi</a>
+                  </div>
+                  <div class="copy">
+                    <a href="#"><i class="fa-solid fa-copy"></i>
+                      Copia</a>
+                  </div>
+                  <hr>
+
+                  <!-- Forward, Important and Delete -->
+                  <div class="forward">
+                    <a href="#"><i class="fa-solid fa-share"></i>
+                      Inoltra</a>
+                  </div>
+                  <div class="important">
+                    <a href="#"> <i class="fa-regular fa-star"></i>
+                      Importante</a>
+                  </div>
+                  <div class="delete">
+                    <a href="#"> <i class="fa-regular fa-trash-can"></i>
+                      Elimina</a>
+                  </div>
+                  <hr>
+
+                  <!-- Select -->
+                  <div class="select">
+                    <a href="#"><i class="fa-regular fa-square-check"></i>
+                      Seleziona</a>
+                  </div>
+
+                </div>
+
+                <p class="time">16:13</p>
+              </div>
+            </div>
+
+            <div class="received_message d_flex">
+              <div class="message">Lorem ipsum dolor sit!
+              </div>
+
+              <!-- Dropdown menu -->
+              <div class="msg_menu d_flex flex_column">
+                <i class="msg_options_icon fa-solid fa-chevron-down"></i>
+                <div class="msg_actions hide">
+
+                  <!-- Reactions -->
+                  <div class="reactions">
+                    <ul class="d_flex">
+                      <li class="d_flex"><a href="#">👍</a></li>
+                      <li class="d_flex"><a href="#">❤️</a></li>
+                      <li class="d_flex"><a href="#">😂</a></li>
+                      <li class="d_flex"><a href="#">😯</a></li>
+                      <li class="d_flex"><a href="#">😢</a></li>
+                      <li class="d_flex"><a href="#">🙏</a></li>
+                    </ul>
+                  </div>
+                  <hr>
+
+                  <!-- Reply and Copy-->
+                  <div class="reply">
+                    <a href="#"><i class="fa-solid fa-reply"></i>
+                      Rispondi</a>
+                  </div>
+                  <div class="copy">
+                    <a href="#"><i class="fa-solid fa-copy"></i>
+                      Copia</a>
+                  </div>
+                  <hr>
+
+                  <!-- Forward, Important and Delete -->
+                  <div class="forward">
+                    <a href="#"><i class="fa-solid fa-share"></i>
+                      Inoltra</a>
+                  </div>
+                  <div class="important">
+                    <a href="#"> <i class="fa-regular fa-star"></i>
+                      Importante</a>
+                  </div>
+                  <div class="delete">
+                    <a href="#"> <i class="fa-regular fa-trash-can"></i>
+                      Elimina</a>
+                  </div>
+                  <hr>
+
+                  <!-- Select -->
+                  <div class="select">
+                    <a href="#"><i class="fa-regular fa-square-check"></i>
+                      Seleziona</a>
+                  </div>
+
+                </div>
+
+                <p class="time">16:13</p>
+              </div>
+            </div>
+
+            <div class="sent_message d_flex">
+              <div class="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, laudantium
+                vitae quod commodi, illo maxime culpa earum odit pariatur reiciendis repudiandae nam! Eligendi
+                consequatur itaque ipsum, nostrum quaerat ut quisquam. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet, soluta.
+              </div>
+
+              <!-- Dropdown menu -->
+              <div class="msg_menu d_flex flex_column">
+                <i class="msg_options_icon fa-solid fa-chevron-down"></i>
+                <div class="msg_actions hide">
+
+                  <!-- Reactions -->
+                  <div class="reactions">
+                    <ul class="d_flex">
+                      <li class="d_flex"><a href="#">👍</a></li>
+                      <li class="d_flex"><a href="#">❤️</a></li>
+                      <li class="d_flex"><a href="#">😂</a></li>
+                      <li class="d_flex"><a href="#">😯</a></li>
+                      <li class="d_flex"><a href="#">😢</a></li>
+                      <li class="d_flex"><a href="#">🙏</a></li>
+                    </ul>
+                  </div>
+                  <hr>
+
+                  <!-- Reply and Copy-->
+                  <div class="reply">
+                    <a href="#"><i class="fa-solid fa-reply"></i>
+                      Rispondi</a>
+                  </div>
+                  <div class="copy">
+                    <a href="#"><i class="fa-solid fa-copy"></i>
+                      Copia</a>
+                  </div>
+                  <hr>
+
+                  <!-- Forward, Important and Delete -->
+                  <div class="forward">
+                    <a href="#"><i class="fa-solid fa-share"></i>
+                      Inoltra</a>
+                  </div>
+                  <div class="important">
+                    <a href="#"> <i class="fa-regular fa-star"></i>
+                      Importante</a>
+                  </div>
+                  <div class="delete">
+                    <a href="#"> <i class="fa-regular fa-trash-can"></i>
+                      Elimina</a>
+                  </div>
+                  <hr>
+
+                  <!-- Select -->
+                  <div class="select">
+                    <a href="#"><i class="fa-regular fa-square-check"></i>
+                      Seleziona</a>
+                  </div>
+
+                </div>
+
+                <p class="time">16:13</p>
+              </div>
             </div>
 
           </div>
@@ -246,12 +463,7 @@
 
         </div>
       </div>
-
     </div>
-  </div>
-
-
-
 </body>
 
 </html>
